@@ -1,0 +1,23 @@
+<!--movies/show-->
+<html>
+
+  <head>
+    <title><%= params['title'] %></title>
+  </head>
+
+  <body>
+
+    <% @movies.each do |movie| %>
+    <tr>
+      <td><a href="<%= movie['id'] %>"> <%= movie['title'] %></a></td>
+      <td> <%= movie['year']%> </td>
+      <td> <%= movie['rating']%> </td>
+      <td> <%= movie['genre']%> </td>
+      <td> <%= movie['studio']%> </td>
+      <td> <%= movie['id']%> </td>
+    </tr>
+    <% end %>
+
+  </body>
+
+</html>

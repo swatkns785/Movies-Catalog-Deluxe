@@ -1,0 +1,36 @@
+<!--index/movies-->
+<html>
+
+<head>
+  <title>Movie Database -- Movies</title>
+</head>
+
+<body>
+  <h1>Movies</h1>
+  <table>
+    <thead>
+      <tr>
+        <td>Movie Name</td>
+        <td>Year Released</td>
+        <td>Rating</td>
+        <td>Genre</td>
+        <td>Studio</td>
+        <td>ID</td>
+      </tr>
+    </thead>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><a href="<%= movie['id'] %>"> <%= movie['title'] %></a></td>
+        <td> <%= movie['year']%> </td>
+        <td> <%= movie['rating']%> </td>
+        <td> <%= movie['genre']%> </td>
+        <td> <%= movie['studio']%> </td>
+        <td> <%= movie['id']%> </td>
+      </tr>
+    <% end %>
+  </table>
+
+  </ul>
+</body>
+
+</html>

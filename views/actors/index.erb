@@ -1,0 +1,17 @@
+<!--index/actors-->
+<html>
+
+  <head>
+    <title>Movie Database -- Actors</title>
+  </head>
+
+  <body>
+    <h1>Actors</h1>
+    <ul>
+    <% @actors.each do |actor| %>
+      <li> <%= actor['name'] %> </li>
+      <% end %>
+    </ul>
+  </body>
+
+</html>
