@@ -1,1 +1,20 @@
 <!--actors/show-->
+<html>
+
+<head>
+  <title><%= @actor_data[0]['name'] %></title>
+  <link rel="stylesheet" href="/css/styles.css" type="all media">
+</head>
+
+  <body>
+    <h1><%= @actor_data[0]['name'] %></h1>
+
+
+    <% @actor_data.each do |actor| %>
+      <li><a href="/movies/<%=actor["movie_id"]%>">
+        <%="#{actor["movie"]}"%></a><%= ": #{actor["character"]}" %></li>
+    <% end %>
+
+  </body>
+
+</html>

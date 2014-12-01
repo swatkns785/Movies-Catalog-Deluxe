@@ -2,22 +2,25 @@
 <html>
 
   <head>
-    <title><%= params['title'] %></title>
+    <title><%= @movie_data[0]['title'] %></title>
+    <link rel="stylesheet" href="/css/styles.css" type="all media">
   </head>
-
   <body>
 
-    <% @movies.each do |movie| %>
-    <tr>
-      <td><a href="<%= movie['id'] %>"> <%= movie['title'] %></a></td>
-      <td> <%= movie['year']%> </td>
-      <td> <%= movie['rating']%> </td>
-      <td> <%= movie['genre']%> </td>
-      <td> <%= movie['studio']%> </td>
-      <td> <%= movie['id']%> </td>
-    </tr>
+    <h1><%= @movie_data[0]['title'] %></h1>
+
+    <div class="movie-top-row">
+      <span>Year: <%= @movie_data[0]['year']%></span>
+      <span>Rating: <%= @movie_data[0]['rating']%>/100</span>
+      <span>Genre: <%= @movie_data[0]['genre']%></span>
+      <span>Studio: <%= @movie_data[0]['studio']%></span>
+    </div>
+    <div>&nbsp;</div>
+
+    <% @movie_data.each do |movie| %>
+    <li><a href="/actors/<%= movie["actor_id"] %>"><%="#{movie['actor_name']}"%></a>: <%="#{movie['character_name']}" %></li>
     <% end %>
 
-  </body>
 
+  </body>
 </html>

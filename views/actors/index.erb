@@ -3,13 +3,14 @@
 
   <head>
     <title>Movie Database -- Actors</title>
+    <link rel="stylesheet" href="/css/styles.css" type="all media">
   </head>
 
   <body>
     <h1>Actors</h1>
     <ul>
     <% @actors.each do |actor| %>
-      <li> <%= actor['name'] %> </li>
+      <li><a href="/actors/<%= actor['id'] %>"><%= actor['name'] %> </li>
       <% end %>
     </ul>
   </body>
